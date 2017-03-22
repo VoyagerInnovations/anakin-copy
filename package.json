@@ -1,0 +1,30 @@
+{
+  "name": "anakin-copy",
+  "description": "Copy JSON logs from S3 to PostgreSQL.",
+  "version": "0.0.1",
+  "private": "true",
+  "keywords": [
+    "anakin",
+    "analytics",
+    "copy"
+  ],
+  "author": "zander",
+  "license": "VII",
+  "repository": {
+    "type": "git",
+    "url": "https://git.corp.voyager.ph/analytics/anakin-copy.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "bin": {
+    "anakin-copy": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "fs-extra": "^2.1.2",
+    "lodash": "^4.17.4",
+    "prompt": "^1.0.0"
+  }
+}
