@@ -1,34 +1,21 @@
 #!/usr/bin/env node
 
-var fs = require("fs-extra");
 var package = require("./package.json");
+var run = require("./lib/run");
 
 var program = require("commander").command(package.name);
-var prompt = require("prompt");
 var args = process.argv.slice(2);
 
 program
   .version(package.version, "-v, --version")
-  .option("-o, --option <option>", "Sample option.")
+  .option("--from <from>", "Source folder or file")
+  .option("--to <to>", "Destination table")
+  .option("-r, --recursive [true|false]", "Recursive copy", function(v) {return v !== "false"}, false)
+  .option("--access-key [access_key]", "Access key")
+  .option("--secret-key [secret_key]", "Secret key")
   .parse(process.argv);
 
 !args.length && program.help();
 
-run();
+run(program.opts());
 
-function run() {
-  prompt.colors = false;
-  prompt.message = "";
-  prompt.delimiter = "";
-  prompt.start();
-
-  console.log("Hello world! option: %s", program.option);
-
-  prompt.confirm("Do you want to continue?", function(err, ans) {
-    if (ans) {
-      console.log("Done.");
-    } else {
-      console.log("Cancelled.");
-    }
-  });
-}
