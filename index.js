@@ -18,6 +18,7 @@ program
   .option("--secret-key <secret_key>", "AWS secret key")
   .option("-r, --recursive [true|false]", "Recursive copy, default=false", function(v) {return v !== "false"}, false)
   .option("-f, --force [true|false]", "Non-interactive, default=false", function(v) {return v !== "false"}, false)
+  .option("-d, --debug [true|false]", "Non-interactive, default=false", function(v) {return v !== "false"}, false)
   .parse(process.argv);
 
 //-- show help for empty arguments...
