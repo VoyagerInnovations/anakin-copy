@@ -24,9 +24,11 @@
   "dependencies": {
     "async": "^2.1.5",
     "commander": "^2.9.0",
+    "file-type": "^4.1.0",
     "fs-extra": "^2.1.2",
     "lodash": "^4.17.4",
     "pg": "^6.1.5",
-    "prompt": "^1.0.0"
+    "prompt": "^1.0.0",
+    "read-chunk": "^2.0.0"
   }
 }
