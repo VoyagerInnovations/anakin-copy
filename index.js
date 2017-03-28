@@ -11,7 +11,6 @@ var args = process.argv.slice(2);
 program
   .version(package.version, "-v, --version")
   .option("--connect <connect>", "Db connection string")
-  .option("--schema <schema>", "Db schema")
   .option("--from <from>", "Source folder or file")
   .option("--to <to>", "Destination table")
   .option("--access-key <access_key>", "AWS access key")
