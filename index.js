@@ -15,6 +15,7 @@ program
   .option("--to <to>", "Destination table")
   .option("--access-key <access_key>", "AWS access key")
   .option("--secret-key <secret_key>", "AWS secret key")
+  .option("--ignore-attrs <attrs_list>", "Ignore attributes")
   .option("-r, --recursive [true|false]", "Recursive copy, default=false", function(v) {return v !== "false"}, false)
   .option("-f, --force [true|false]", "Non-interactive, default=false", function(v) {return v !== "false"}, false)
   .option("-d, --debug [true|false]", "Show debug messages, default=false", function(v) {return v !== "false"}, false)
