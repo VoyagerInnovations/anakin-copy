@@ -13,6 +13,7 @@ program
   .option("--connect <connect>", "Db connection string")
   .option("--from <from>", "Source folder or file")
   .option("--to <to>", "Destination table")
+  .option("--local-dir <local_dir>", "Local directory where remote files are synced, default=./tmp", "tmp")
   .option("--access-key <access_key>", "AWS access key")
   .option("--secret-key <secret_key>", "AWS secret key")
   .option("--ignore-attrs <attrs_list>", "Ignore attributes")
