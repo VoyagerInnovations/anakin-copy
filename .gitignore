@@ -37,7 +37,7 @@ nbproject
 .node_history
 
 # Others
-tmp
+tmp*
 *.swp
 *.rdb
 *.csv
