@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-var package = require(__dirname + "/package.json");
-var run = require(__dirname + "/lib/run");
+var package = require("./package.json");
+var run = require("./lib/run");
 
 var program = require("commander").command(package.name);
 var args = process.argv.slice(2);
